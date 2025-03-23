@@ -1,0 +1,192 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DofusDB API - Sorts & Classes",
+    "description": "Accès aux sorts, niveaux, paires, états, types, variantes et aux breeds (classes).",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.dofusdb.fr",
+      "description": "Serveur principal"
+    }
+  ],
+  "paths": {
+    "/spells": {
+      "get": {
+        "operationId": "getAllSpells",
+        "summary": "Liste tous les sorts",
+        "responses": {
+          "200": {
+            "description": "Liste des sorts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-levels": {
+      "get": {
+        "operationId": "getAllSpellLevels",
+        "summary": "Niveaux de sorts",
+        "responses": {
+          "200": {
+            "description": "Niveaux de sorts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-pairs": {
+      "get": {
+        "operationId": "getAllSpellPairs",
+        "summary": "Paires de sorts",
+        "responses": {
+          "200": {
+            "description": "Spell pairs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-states": {
+      "get": {
+        "operationId": "getAllSpellStates",
+        "summary": "États de sorts",
+        "responses": {
+          "200": {
+            "description": "Spell states",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-types": {
+      "get": {
+        "operationId": "getAllSpellTypes",
+        "summary": "Types de sorts",
+        "responses": {
+          "200": {
+            "description": "Spell types",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-variants": {
+      "get": {
+        "operationId": "getAllSpellVariants",
+        "summary": "Variantes de sorts",
+        "responses": {
+          "200": {
+            "description": "Spell variants",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/breeds": {
+      "get": {
+        "operationId": "getAllBreeds",
+        "summary": "Liste des classes jouables (breeds)",
+        "responses": {
+          "200": {
+            "description": "Breeds",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/custom-mode-breed-spells": {
+      "get": {
+        "operationId": "getCustomModeBreedSpells",
+        "summary": "Associations de sorts pour les breeds",
+        "responses": {
+          "200": {
+            "description": "Custom mode spells",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
