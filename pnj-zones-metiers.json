@@ -1,0 +1,192 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DofusDB API - PNJ, Zones & Métiers",
+    "description": "Accès aux NPCs, messages, boutiques, maps, zones, positions, transports et métiers.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.dofusdb.fr",
+      "description": "Serveur principal"
+    }
+  ],
+  "paths": {
+    "/npcs": {
+      "get": {
+        "operationId": "getAllNpcs",
+        "summary": "Liste des PNJ",
+        "responses": {
+          "200": {
+            "description": "PNJ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/npc-messages": {
+      "get": {
+        "operationId": "getAllNpcMessages",
+        "summary": "Messages des PNJ",
+        "responses": {
+          "200": {
+            "description": "Messages des PNJ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/npc-shop": {
+      "get": {
+        "operationId": "getAllNpcShops",
+        "summary": "Boutiques des PNJ",
+        "responses": {
+          "200": {
+            "description": "Boutiques des PNJ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/maps": {
+      "get": {
+        "operationId": "getAllMaps",
+        "summary": "Liste des cartes",
+        "responses": {
+          "200": {
+            "description": "Maps",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/map-positions": {
+      "get": {
+        "operationId": "getAllMapPositions",
+        "summary": "Coordonnées et infos de map",
+        "responses": {
+          "200": {
+            "description": "Positions de maps",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/map-references": {
+      "get": {
+        "operationId": "getAllMapReferences",
+        "summary": "Références de maps",
+        "responses": {
+          "200": {
+            "description": "Références de maps",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transport-from-maps": {
+      "get": {
+        "operationId": "getAllTransports",
+        "summary": "Points de transport",
+        "responses": {
+          "200": {
+            "description": "Transports",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "get": {
+        "operationId": "getAllJobs",
+        "summary": "Liste des métiers",
+        "responses": {
+          "200": {
+            "description": "Métiers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
