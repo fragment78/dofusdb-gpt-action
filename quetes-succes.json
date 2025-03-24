@@ -1,0 +1,236 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DofusDB API - Quêtes & Succès",
+    "description": "Accès aux quêtes, catégories de quêtes, objectifs, étapes, récompenses, ainsi qu’aux succès, catégories, objectifs et récompenses de succès.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.dofusdb.fr",
+      "description": "Serveur principal"
+    }
+  ],
+  "paths": {
+    "/quests": {
+      "get": {
+        "operationId": "getAllQuests",
+        "summary": "Liste des quêtes",
+        "responses": {
+          "200": {
+            "description": "Quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quest-categories": {
+      "get": {
+        "operationId": "getAllQuestCategories",
+        "summary": "Catégories de quêtes",
+        "responses": {
+          "200": {
+            "description": "Catégories de quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quest-objectives": {
+      "get": {
+        "operationId": "getAllQuestObjectives",
+        "summary": "Objectifs de quêtes",
+        "responses": {
+          "200": {
+            "description": "Objectifs de quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quest-objective-types": {
+      "get": {
+        "operationId": "getAllQuestObjectiveTypes",
+        "summary": "Types d’objectifs de quêtes",
+        "responses": {
+          "200": {
+            "description": "Types d’objectifs de quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quest-steps": {
+      "get": {
+        "operationId": "getAllQuestSteps",
+        "summary": "Étapes de quêtes",
+        "responses": {
+          "200": {
+            "description": "Étapes de quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quest-step-rewards": {
+      "get": {
+        "operationId": "getAllQuestStepRewards",
+        "summary": "Récompenses d’étapes de quêtes",
+        "responses": {
+          "200": {
+            "description": "Récompenses d’étapes de quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievements": {
+      "get": {
+        "operationId": "getAllAchievements",
+        "summary": "Liste des succès",
+        "responses": {
+          "200": {
+            "description": "Succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievement-categories": {
+      "get": {
+        "operationId": "getAllAchievementCategories",
+        "summary": "Catégories de succès",
+        "responses": {
+          "200": {
+            "description": "Catégories de succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievement-objectives": {
+      "get": {
+        "operationId": "getAllAchievementObjectives",
+        "summary": "Objectifs de succès",
+        "responses": {
+          "200": {
+            "description": "Objectifs de succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievement-rewards": {
+      "get": {
+        "operationId": "getAllAchievementRewards",
+        "summary": "Récompenses de succès",
+        "responses": {
+          "200": {
+            "description": "Récompenses de succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
