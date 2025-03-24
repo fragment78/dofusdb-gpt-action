@@ -3,12 +3,12 @@
   "info": {
     "title": "Objets Dofus API",
     "version": "1.0.0",
-    "description": "Accès aux objets, panoplies, types, recettes, ressources via proxy DofusDB"
+    "description": "Accès aux objets, panoplies, types, super types, recettes et ressources de Dofus via proxy personnalisé."
   },
   "servers": [
     {
-      "url": "https://proxy-node-js.vercel.app",
-      "description": "Proxy Vercel DofusDB"
+      "url": "https://proxy-items.vercel.app",
+      "description": "Proxy Vercel dédié aux objets"
     }
   ],
   "paths": {
@@ -16,6 +16,18 @@
       "get": {
         "operationId": "getItems",
         "summary": "Liste des objets",
+        "description": "Renvoie la liste de tous les objets du jeu.",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 100
+            },
+            "description": "Nombre maximum d’objets à retourner"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Liste complète des objets",
@@ -23,7 +35,10 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -42,7 +57,10 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -56,12 +74,15 @@
         "summary": "Liste des types d’objets",
         "responses": {
           "200": {
-            "description": "Liste des types",
+            "description": "Liste des types d'objets",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -72,15 +93,18 @@
     "/item-super-types": {
       "get": {
         "operationId": "getItemSuperTypes",
-        "summary": "Liste des super types d’objets",
+        "summary": "Super types d’objets",
         "responses": {
           "200": {
-            "description": "Liste des super types",
+            "description": "Liste des super types d'objets",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -92,14 +116,28 @@
       "get": {
         "operationId": "getRecipes",
         "summary": "Liste des recettes",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 100
+            },
+            "description": "Limiter le nombre de recettes retournées"
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Toutes les recettes",
+            "description": "Toutes les recettes disponibles",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -113,12 +151,15 @@
         "summary": "Liste des ressources",
         "responses": {
           "200": {
-            "description": "Toutes les ressources",
+            "description": "Ressources disponibles dans le jeu",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
