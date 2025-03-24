@@ -1,0 +1,149 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Quêtes et Succès Dofus API",
+    "version": "1.0.0",
+    "description": "Accès complet aux quêtes, étapes, récompenses, succès et objectifs dans Dofus via proxy dédié."
+  },
+  "servers": [
+    {
+      "url": "https://proxy-quests.vercel.app",
+      "description": "Proxy Vercel dédié aux quêtes et succès"
+    }
+  ],
+  "paths": {
+    "/quests": {
+      "get": {
+        "operationId": "getQuests",
+        "summary": "Liste des quêtes",
+        "responses": {
+          "200": {
+            "description": "Toutes les quêtes disponibles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quest-steps": {
+      "get": {
+        "operationId": "getQuestSteps",
+        "summary": "Étapes de quêtes",
+        "responses": {
+          "200": {
+            "description": "Toutes les étapes de quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quest-step-rewards": {
+      "get": {
+        "operationId": "getQuestStepRewards",
+        "summary": "Récompenses d'étapes",
+        "responses": {
+          "200": {
+            "description": "Toutes les récompenses de quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievements": {
+      "get": {
+        "operationId": "getAchievements",
+        "summary": "Succès",
+        "responses": {
+          "200": {
+            "description": "Liste de tous les succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievement-categories": {
+      "get": {
+        "operationId": "getAchievementCategories",
+        "summary": "Catégories de succès",
+        "responses": {
+          "200": {
+            "description": "Toutes les catégories de succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievement-objectives": {
+      "get": {
+        "operationId": "getAchievementObjectives",
+        "summary": "Objectifs de succès",
+        "responses": {
+          "200": {
+            "description": "Tous les objectifs associés aux succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievement-rewards": {
+      "get": {
+        "operationId": "getAchievementRewards",
+        "summary": "Récompenses de succès",
+        "responses": {
+          "200": {
+            "description": "Toutes les récompenses de succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
