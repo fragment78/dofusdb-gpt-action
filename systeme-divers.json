@@ -1,0 +1,431 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DofusDB API - Système & Divers",
+    "description": "Accès aux données système : almanax, alignements, guildes, titres, ornements, smileys, emoticons, documents, serveurs, mondes, version, etc.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.dofusdb.fr",
+      "description": "Serveur principal"
+    }
+  ],
+  "paths": {
+    "/almanax": {
+      "get": {
+        "operationId": "getAlmanax",
+        "summary": "Infos quotidiennes de l’Almanax",
+        "responses": {
+          "200": {
+            "description": "Almanax du jour",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/almanax-calendars": {
+      "get": {
+        "operationId": "getAlmanaxCalendars",
+        "summary": "Calendrier de l’Almanax",
+        "responses": {
+          "200": {
+            "description": "Calendrier de l’Almanax",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/alignment-sides": {
+      "get": {
+        "operationId": "getAlignmentSides",
+        "summary": "Alignements (ex : Bontarien, Brâkmarien)",
+        "responses": {
+          "200": {
+            "description": "Alignement sides",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/alignment-ranks": {
+      "get": {
+        "operationId": "getAlignmentRanks",
+        "summary": "Rangs d’alignement",
+        "responses": {
+          "200": {
+            "description": "Rangs d’alignement",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/guild-rights": {
+      "get": {
+        "operationId": "getGuildRights",
+        "summary": "Droits de guilde",
+        "responses": {
+          "200": {
+            "description": "Droits de guilde",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/alliance-rights": {
+      "get": {
+        "operationId": "getAllianceRights",
+        "summary": "Droits d’alliance",
+        "responses": {
+          "200": {
+            "description": "Droits d’alliance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/titles": {
+      "get": {
+        "operationId": "getAllTitles",
+        "summary": "Titres de personnage",
+        "responses": {
+          "200": {
+            "description": "Titres",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ornaments": {
+      "get": {
+        "operationId": "getAllOrnaments",
+        "summary": "Ornements de personnage",
+        "responses": {
+          "200": {
+            "description": "Ornements",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/smiley-packs": {
+      "get": {
+        "operationId": "getAllSmileyPacks",
+        "summary": "Packs de smileys",
+        "responses": {
+          "200": {
+            "description": "Packs de smileys",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/emoticons": {
+      "get": {
+        "operationId": "getAllEmoticons",
+        "summary": "Emoticons / Emotes",
+        "responses": {
+          "200": {
+            "description": "Emoticons",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/features-descriptions": {
+      "get": {
+        "operationId": "getAllFeatureDescriptions",
+        "summary": "Descriptions système de fonctionnalités",
+        "responses": {
+          "200": {
+            "description": "Descriptions système",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/info-messages": {
+      "get": {
+        "operationId": "getAllInfoMessages",
+        "summary": "Messages système informatifs",
+        "responses": {
+          "200": {
+            "description": "Messages système",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents": {
+      "get": {
+        "operationId": "getAllDocuments",
+        "summary": "Documents affichés en jeu",
+        "responses": {
+          "200": {
+            "description": "Documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incarnation-informations": {
+      "get": {
+        "operationId": "getAllIncarnationInfos",
+        "summary": "Infos sur les incarnations",
+        "responses": {
+          "200": {
+            "description": "Incarnations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/server-seasons": {
+      "get": {
+        "operationId": "getServerSeasons",
+        "summary": "Saisons par serveur",
+        "responses": {
+          "200": {
+            "description": "Saisons des serveurs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/server-game-types": {
+      "get": {
+        "operationId": "getServerGameTypes",
+        "summary": "Types de serveurs",
+        "responses": {
+          "200": {
+            "description": "Types de serveurs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/servers": {
+      "get": {
+        "operationId": "getAllServers",
+        "summary": "Liste des serveurs",
+        "responses": {
+          "200": {
+            "description": "Serveurs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/worlds": {
+      "get": {
+        "operationId": "getAllWorlds",
+        "summary": "Mondes de jeu",
+        "responses": {
+          "200": {
+            "description": "Mondes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/version": {
+      "get": {
+        "operationId": "getApiVersion",
+        "summary": "Version de l’API DofusDB",
+        "responses": {
+          "200": {
+            "description": "Version de l’API",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
