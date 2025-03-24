@@ -1,0 +1,233 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DofusDB Proxy API",
+    "description": "Accès complet à l’API DofusDB via un proxy personnalisé hébergé sur Vercel.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://proxy-node-js.vercel.app",
+      "description": "Proxy vers api.dofusdb.fr hébergé sur Vercel"
+    }
+  ],
+  "paths": {
+    "/items": {
+      "get": {
+        "operationId": "getItems",
+        "summary": "Liste des objets",
+        "responses": {
+          "200": {
+            "description": "Liste des objets",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spells": {
+      "get": {
+        "operationId": "getSpells",
+        "summary": "Liste des sorts",
+        "responses": {
+          "200": {
+            "description": "Liste des sorts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/monsters": {
+      "get": {
+        "operationId": "getMonsters",
+        "summary": "Liste des monstres",
+        "responses": {
+          "200": {
+            "description": "Liste des monstres",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-sets": {
+      "get": {
+        "operationId": "getItemSets",
+        "summary": "Liste des panoplies",
+        "responses": {
+          "200": {
+            "description": "Liste des panoplies",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/breeds": {
+      "get": {
+        "operationId": "getBreeds",
+        "summary": "Liste des classes jouables",
+        "responses": {
+          "200": {
+            "description": "Liste des classes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "get": {
+        "operationId": "getJobs",
+        "summary": "Liste des métiers",
+        "responses": {
+          "200": {
+            "description": "Liste des métiers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quests": {
+      "get": {
+        "operationId": "getQuests",
+        "summary": "Liste des quêtes",
+        "responses": {
+          "200": {
+            "description": "Liste des quêtes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/achievements": {
+      "get": {
+        "operationId": "getAchievements",
+        "summary": "Liste des succès",
+        "responses": {
+          "200": {
+            "description": "Liste des succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/almanax": {
+      "get": {
+        "operationId": "getAlmanax",
+        "summary": "Almanax du jour",
+        "responses": {
+          "200": {
+            "description": "Almanax",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/version": {
+      "get": {
+        "operationId": "getVersion",
+        "summary": "Version de l’API",
+        "responses": {
+          "200": {
+            "description": "Version",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
