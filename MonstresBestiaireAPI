@@ -1,0 +1,115 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Monstres et Bestiaire Dofus API",
+    "version": "1.0.0",
+    "description": "Accès aux monstres, races, modsters et super-races du jeu Dofus via proxy personnalisé."
+  },
+  "servers": [
+    {
+      "url": "https://proxy-monsters.vercel.app",
+      "description": "Proxy Vercel dédié aux monstres"
+    }
+  ],
+  "paths": {
+    "/monsters": {
+      "get": {
+        "operationId": "getMonsters",
+        "summary": "Liste des monstres",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 100
+            },
+            "description": "Limiter le nombre de monstres retournés"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tous les monstres du jeu",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/monster-races": {
+      "get": {
+        "operationId": "getMonsterRaces",
+        "summary": "Races de monstres",
+        "responses": {
+          "200": {
+            "description": "Toutes les races de monstres",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/monster-super-races": {
+      "get": {
+        "operationId": "getMonsterSuperRaces",
+        "summary": "Super-races de monstres",
+        "responses": {
+          "200": {
+            "description": "Toutes les super races de monstres",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/modsters": {
+      "get": {
+        "operationId": "getModsters",
+        "summary": "Modsters",
+        "responses": {
+          "200": {
+            "description": "Liste des modsters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
