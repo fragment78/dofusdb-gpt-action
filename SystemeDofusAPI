@@ -1,0 +1,145 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Système Dofus API",
+    "version": "1.0.0",
+    "description": "Accès aux titres, ornements, Almanax, serveurs et informations système de Dofus via proxy dédié."
+  },
+  "servers": [
+    {
+      "url": "https://proxy-system.vercel.app",
+      "description": "Proxy Vercel dédié au système de jeu"
+    }
+  ],
+  "paths": {
+    "/titles": {
+      "get": {
+        "operationId": "getTitles",
+        "summary": "Liste des titres",
+        "responses": {
+          "200": {
+            "description": "Tous les titres de personnages",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ornaments": {
+      "get": {
+        "operationId": "getOrnaments",
+        "summary": "Liste des ornements",
+        "responses": {
+          "200": {
+            "description": "Tous les ornements",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/almanax": {
+      "get": {
+        "operationId": "getAlmanax",
+        "summary": "Almanax du jour",
+        "responses": {
+          "200": {
+            "description": "Détails de l’Almanax",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/almanax-calendars": {
+      "get": {
+        "operationId": "getAlmanaxCalendars",
+        "summary": "Calendrier Almanax",
+        "responses": {
+          "200": {
+            "description": "Tous les jours de l’Almanax",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/servers": {
+      "get": {
+        "operationId": "getServers",
+        "summary": "Liste des serveurs",
+        "responses": {
+          "200": {
+            "description": "Serveurs de jeu disponibles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/version": {
+      "get": {
+        "operationId": "getVersion",
+        "summary": "Version de l’API",
+        "responses": {
+          "200": {
+            "description": "Version actuelle de l’API DofusDB",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
