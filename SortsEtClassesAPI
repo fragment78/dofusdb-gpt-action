@@ -2,13 +2,13 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Sorts et Classes Dofus API",
-    "version": "1.0.1",
-    "description": "Accès aux sorts, niveaux, variantes et classes jouables dans Dofus via proxy. Réponse JSON corrigée avec structure data[]."
+    "version": "1.0.2",
+    "description": "Accès aux sorts, niveaux, variantes et classes Dofus via proxy. Version simplifiée avec tableau direct JSON."
   },
   "servers": [
     {
       "url": "https://proxy-spells.vercel.app",
-      "description": "Proxy Vercel dédié aux sorts et classes"
+      "description": "Proxy Vercel optimisé pour GPT"
     }
   ],
   "paths": {
@@ -21,25 +21,17 @@
             "name": "limit",
             "in": "query",
             "schema": { "type": "integer", "default": 100 },
-            "description": "Limiter le nombre de sorts retournés"
+            "description": "Limiter le nombre de sorts"
           }
         ],
         "responses": {
           "200": {
-            "description": "Tous les sorts disponibles",
+            "description": "Tableau de sorts",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {}
-                      }
-                    }
-                  }
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
                 }
               }
             }
@@ -50,20 +42,15 @@
     "/spell-levels": {
       "get": {
         "operationId": "getSpellLevels",
-        "summary": "Niveaux des sorts",
+        "summary": "Niveaux de sorts",
         "responses": {
           "200": {
-            "description": "Tous les niveaux des sorts",
+            "description": "Liste des niveaux de sorts",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object", "properties": {} }
-                    }
-                  }
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
                 }
               }
             }
@@ -81,13 +68,8 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object", "properties": {} }
-                    }
-                  }
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
                 }
               }
             }
@@ -101,17 +83,12 @@
         "summary": "Types de sorts",
         "responses": {
           "200": {
-            "description": "Tous les types de sorts",
+            "description": "Types disponibles",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object", "properties": {} }
-                    }
-                  }
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
                 }
               }
             }
@@ -122,7 +99,7 @@
     "/breeds": {
       "get": {
         "operationId": "getBreeds",
-        "summary": "Classes jouables",
+        "summary": "Liste des classes jouables",
         "parameters": [
           {
             "name": "limit",
@@ -133,17 +110,12 @@
         ],
         "responses": {
           "200": {
-            "description": "Liste des classes (breeds)",
+            "description": "Liste des classes",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object", "properties": {} }
-                    }
-                  }
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
                 }
               }
             }
@@ -157,17 +129,12 @@
         "summary": "Sorts personnalisés par classe",
         "responses": {
           "200": {
-            "description": "Sorts spécifiques aux modes personnalisés",
+            "description": "Sorts en mode personnalisé",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object", "properties": {} }
-                    }
-                  }
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
                 }
               }
             }
