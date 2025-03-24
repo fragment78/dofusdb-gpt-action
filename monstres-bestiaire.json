@@ -1,0 +1,133 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DofusDB API - Monstres & Bestiaire",
+    "description": "Accès aux monstres, modsters, races et super-races de Dofus.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.dofusdb.fr",
+      "description": "Serveur principal"
+    }
+  ],
+  "paths": {
+    "/monsters": {
+      "get": {
+        "operationId": "getAllMonsters",
+        "summary": "Liste tous les monstres",
+        "responses": {
+          "200": {
+            "description": "Liste des monstres",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/monsters/{id}": {
+      "get": {
+        "operationId": "getMonsterById",
+        "summary": "Détail d’un monstre par ID",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Monstre",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/modsters": {
+      "get": {
+        "operationId": "getAllModsters",
+        "summary": "Liste des modsters",
+        "responses": {
+          "200": {
+            "description": "Liste des modsters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/monster-races": {
+      "get": {
+        "operationId": "getAllMonsterRaces",
+        "summary": "Liste des races de monstres",
+        "responses": {
+          "200": {
+            "description": "Races de monstres",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/monster-super-races": {
+      "get": {
+        "operationId": "getAllMonsterSuperRaces",
+        "summary": "Liste des super-races de monstres",
+        "responses": {
+          "200": {
+            "description": "Super-races",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
