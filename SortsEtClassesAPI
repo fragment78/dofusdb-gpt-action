@@ -1,14 +1,14 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Sorts et Classes API",
+    "title": "Sorts et Classes Dofus API",
     "version": "1.0.0",
-    "description": "Accès aux sorts, niveaux de sorts, variantes, types et classes via proxy DofusDB"
+    "description": "Accès aux sorts, niveaux, variantes et classes jouables dans Dofus via proxy."
   },
   "servers": [
     {
-      "url": "https://proxy-node-js.vercel.app",
-      "description": "Proxy Vercel DofusDB"
+      "url": "https://proxy-spells.vercel.app",
+      "description": "Proxy Vercel dédié aux sorts et classes"
     }
   ],
   "paths": {
@@ -16,14 +16,28 @@
       "get": {
         "operationId": "getSpells",
         "summary": "Liste des sorts",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 100
+            },
+            "description": "Limiter le nombre de sorts retournés"
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Tous les sorts du jeu",
+            "description": "Tous les sorts disponibles",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -37,12 +51,15 @@
         "summary": "Niveaux des sorts",
         "responses": {
           "200": {
-            "description": "Tous les niveaux de sorts",
+            "description": "Tous les niveaux des sorts",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -56,12 +73,15 @@
         "summary": "Variantes de sorts",
         "responses": {
           "200": {
-            "description": "Variantes disponibles",
+            "description": "Liste des variantes de sorts",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -75,12 +95,15 @@
         "summary": "Types de sorts",
         "responses": {
           "200": {
-            "description": "Types de sorts utilisés",
+            "description": "Tous les types de sorts",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -91,15 +114,29 @@
     "/breeds": {
       "get": {
         "operationId": "getBreeds",
-        "summary": "Liste des classes jouables",
+        "summary": "Classes jouables",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 100
+            },
+            "description": "Limiter les résultats"
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Toutes les classes (breeds)",
+            "description": "Liste des classes (breeds)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
@@ -109,16 +146,19 @@
     },
     "/custom-mode-breed-spells": {
       "get": {
-        "operationId": "getBreedSpellModes",
-        "summary": "Spécificités de sorts en mode personnalisé",
+        "operationId": "getBreedCustomSpells",
+        "summary": "Sorts personnalisés par classe",
         "responses": {
           "200": {
-            "description": "Configuration des sorts par classe",
+            "description": "Sorts spécifiques aux modes personnalisés",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object", "properties": {} }
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
                 }
               }
             }
