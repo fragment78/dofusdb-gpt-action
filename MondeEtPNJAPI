@@ -1,0 +1,168 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Monde et PNJ Dofus API",
+    "version": "1.0.0",
+    "description": "Accès aux cartes, zones, sous-zones, PNJ, métiers et donjons via proxy dédié."
+  },
+  "servers": [
+    {
+      "url": "https://proxy-world.vercel.app",
+      "description": "Proxy Vercel dédié au monde de Dofus"
+    }
+  ],
+  "paths": {
+    "/maps": {
+      "get": {
+        "operationId": "getMaps",
+        "summary": "Cartes du monde",
+        "responses": {
+          "200": {
+            "description": "Toutes les cartes disponibles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/areas": {
+      "get": {
+        "operationId": "getAreas",
+        "summary": "Zones géographiques",
+        "responses": {
+          "200": {
+            "description": "Zones disponibles dans Dofus",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subareas": {
+      "get": {
+        "operationId": "getSubareas",
+        "summary": "Sous-zones",
+        "responses": {
+          "200": {
+            "description": "Toutes les sous-zones du monde",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dungeons": {
+      "get": {
+        "operationId": "getDungeons",
+        "summary": "Donjons du jeu",
+        "responses": {
+          "200": {
+            "description": "Liste des donjons",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/npcs": {
+      "get": {
+        "operationId": "getNpcs",
+        "summary": "Liste des PNJ",
+        "responses": {
+          "200": {
+            "description": "Tous les PNJ disponibles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/npc-messages": {
+      "get": {
+        "operationId": "getNpcMessages",
+        "summary": "Messages des PNJ",
+        "responses": {
+          "200": {
+            "description": "Tous les dialogues de PNJ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/npc-shop": {
+      "get": {
+        "operationId": "getNpcShops",
+        "summary": "Boutiques de PNJ",
+        "responses": {
+          "200": {
+            "description": "Inventaire des boutiques PNJ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "get": {
+        "operationId": "getJobs",
+        "summary": "Métiers",
+        "responses": {
+          "200": {
+            "description": "Métiers disponibles dans Dofus",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
