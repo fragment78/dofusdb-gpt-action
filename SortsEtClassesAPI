@@ -1,0 +1,130 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Sorts et Classes API",
+    "version": "1.0.0",
+    "description": "Accès aux sorts, niveaux de sorts, variantes, types et classes via proxy DofusDB"
+  },
+  "servers": [
+    {
+      "url": "https://proxy-node-js.vercel.app",
+      "description": "Proxy Vercel DofusDB"
+    }
+  ],
+  "paths": {
+    "/spells": {
+      "get": {
+        "operationId": "getSpells",
+        "summary": "Liste des sorts",
+        "responses": {
+          "200": {
+            "description": "Tous les sorts du jeu",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-levels": {
+      "get": {
+        "operationId": "getSpellLevels",
+        "summary": "Niveaux des sorts",
+        "responses": {
+          "200": {
+            "description": "Tous les niveaux de sorts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-variants": {
+      "get": {
+        "operationId": "getSpellVariants",
+        "summary": "Variantes de sorts",
+        "responses": {
+          "200": {
+            "description": "Variantes disponibles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spell-types": {
+      "get": {
+        "operationId": "getSpellTypes",
+        "summary": "Types de sorts",
+        "responses": {
+          "200": {
+            "description": "Types de sorts utilisés",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/breeds": {
+      "get": {
+        "operationId": "getBreeds",
+        "summary": "Liste des classes jouables",
+        "responses": {
+          "200": {
+            "description": "Toutes les classes (breeds)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/custom-mode-breed-spells": {
+      "get": {
+        "operationId": "getBreedSpellModes",
+        "summary": "Spécificités de sorts en mode personnalisé",
+        "responses": {
+          "200": {
+            "description": "Configuration des sorts par classe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
