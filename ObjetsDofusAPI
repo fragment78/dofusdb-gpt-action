@@ -1,0 +1,130 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Objets Dofus API",
+    "version": "1.0.0",
+    "description": "Accès aux objets, panoplies, types, recettes, ressources via proxy DofusDB"
+  },
+  "servers": [
+    {
+      "url": "https://proxy-node-js.vercel.app",
+      "description": "Proxy Vercel DofusDB"
+    }
+  ],
+  "paths": {
+    "/items": {
+      "get": {
+        "operationId": "getItems",
+        "summary": "Liste des objets",
+        "responses": {
+          "200": {
+            "description": "Liste complète des objets",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-sets": {
+      "get": {
+        "operationId": "getItemSets",
+        "summary": "Liste des panoplies",
+        "responses": {
+          "200": {
+            "description": "Liste des sets d’objets",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-types": {
+      "get": {
+        "operationId": "getItemTypes",
+        "summary": "Liste des types d’objets",
+        "responses": {
+          "200": {
+            "description": "Liste des types",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-super-types": {
+      "get": {
+        "operationId": "getItemSuperTypes",
+        "summary": "Liste des super types d’objets",
+        "responses": {
+          "200": {
+            "description": "Liste des super types",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recipes": {
+      "get": {
+        "operationId": "getRecipes",
+        "summary": "Liste des recettes",
+        "responses": {
+          "200": {
+            "description": "Toutes les recettes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resources": {
+      "get": {
+        "operationId": "getResources",
+        "summary": "Liste des ressources",
+        "responses": {
+          "200": {
+            "description": "Toutes les ressources",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": {} }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
